@@ -1,5 +1,7 @@
-import React from 'react'
+import { salesRequest } from 'modules/slice/salesSlice'
+import React, { useEffect } from 'react'
 import Chart from 'react-google-charts'
+import { useDispatch } from 'react-redux'
 import styles from '../styles/Bar.module.css'
 
 export const data = [
@@ -25,7 +27,9 @@ export const options = {
       subtitle: "매출, 비용, 이익: 2019-2021년도",
     },
   };
+
 const BarChart = () => {
+
   return (
     <div >
       <h2>Bar Chart</h2>
