@@ -26,6 +26,7 @@ public class DemoController {
     private final DemoRepository repository;
     @GetMapping("/api/chart")
     public ResponseEntity<List<Earning>> getChart(){
+
         return ResponseEntity.ok(repository.findAll());
     }
 }
