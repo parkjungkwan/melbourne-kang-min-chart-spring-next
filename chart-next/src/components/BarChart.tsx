@@ -7,6 +7,10 @@ export const data = [
     { year: '2021', sales: '67456', cost: '6575', profit: '6765' },
 ]
 
+function jsonConvertToArray(){
+  
+}
+
 export const data2 = [
   ["Year", "Sales", "Expenses", "Profit"],
   ["2018", 1000, 400, 200],
