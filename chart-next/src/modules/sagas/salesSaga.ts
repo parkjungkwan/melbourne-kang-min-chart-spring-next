@@ -8,24 +8,26 @@ import { salesApi } from 'modules/apis/salesApi';
 interface salesType{
     type: string;
     payload: {
-        year:string , sales:number, cost:number, profit:number
+        year:string , sales:string, cost:string, profit:string
     }
 }
 interface salesSuccessType{
     type: string;
     payload: {
-        year:string , sales:number, cost:number, profit:number
+        year:string , sales:string, cost:string, profit:string
     }
 }
-function* sales(sales: salesType){
-    try {
-        const response: salesSuccessType = yield salesApi()
-        yield put(salesActions.salesSuccess(response))
-    }catch(error){
-         console.log('3 saga내부 join 실패  ')
-         yield put(salesActions.salesFailure(error))
-    }
-}
+
 export function* watchSales(){
-    yield takeLatest(salesActions.salesRequest, sales)
+    yield takeLatest(salesActions.salesRequest, (sales: salesType) => {
+        try {
+            const data: any = salesApi()
+            console.log(' ###### ')
+            console.log(data)
+            put(salesActions.salesSuccess(data))
+        }catch(error){
+             console.log('3 saga내부 join 실패  ')
+             put(salesActions.salesFailure(error))
+        }
+    })
 }
