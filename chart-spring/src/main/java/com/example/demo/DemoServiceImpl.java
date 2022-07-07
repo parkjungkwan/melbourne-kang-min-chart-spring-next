@@ -1,9 +1,9 @@
 package com.example.demo;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,12 +18,11 @@ import java.util.List;
  * 2022-07-06        j2022       최초 생성
  */
 @Service @RequiredArgsConstructor
-public class DemoServiceImpl implements DemoService{
+public class DemoServiceImpl implements DemoService {
     private final DemoRepository repository;
 
-    @Override
     public List<Earning> findAll() {
-        //여기에
-
-        return repository.findAll();}
+        Arrays.asList()
+        return repository.findAll();
+    }
 }

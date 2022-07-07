@@ -1,8 +1,6 @@
 package com.example.demo;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +23,6 @@ public class DemoController {
     private final DemoService service;
     @GetMapping("/api/chart")
     public List<Earning> findAll(){
-
         return service.findAll();
     }
 }
