@@ -12,6 +12,8 @@
     "@reduxjs/toolkit": "^1.8.3",
     "@types/redux-logger": "^3.0.9",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "jwt-decode": "^3.1.2",
     "next": "12.2.0",
     "next-redux-wrapper": "^7.0.5",
     "react": "18.2.0",

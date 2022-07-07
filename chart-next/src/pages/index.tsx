@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Link href="/chart"><button >챠트보기</button></Link>
-      
+      <Link href="/googleLogin"><button>구글 로그인</button></Link>
     </div>
   )
 }
