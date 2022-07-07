@@ -22,7 +22,7 @@ public class DemoServiceImpl implements DemoService {
     private final DemoRepository repository;
 
     public List<Earning> findAll() {
-        Arrays.asList()
+        //Arrays.asList()
         return repository.findAll();
     }
 }
