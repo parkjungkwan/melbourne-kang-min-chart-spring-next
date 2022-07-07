@@ -3,9 +3,7 @@ package com.example.demo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,13 +18,14 @@ import java.util.List;
  * ================================
  * 2022-07-05   parkjungkwan  최초 생성
  */
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
-    private final DemoRepository repository;
+    private final DemoService service;
     @GetMapping("/api/chart")
-    public ResponseEntity<List<Earning>> getChart(){
+    public List<Earning> findAll(){
 
-        return ResponseEntity.ok(repository.findAll());
+        return service.findAll();
     }
 }
