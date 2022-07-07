@@ -29,7 +29,7 @@ import javax.persistence.Id;
 public class Earning {
     @Id @Column private long id;
     @Column private String year;
-    @Column private String sales;
-    @Column private String cost;
-    @Column private String profit;
+    @Column private int sales;
+    @Column private int cost;
+    @Column private int profit;
 }

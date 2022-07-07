@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface Earning{
-    year:string , sales:string, cost:string, profit:string
+    year:string , sales:number, cost:number, profit:number
 }
 export interface SalesState {
     data: Earning[],

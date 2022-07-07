@@ -25,9 +25,9 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class DemoController {
-    private final DemoRepository repository;
+    private final DemoService demoService;
     @GetMapping("/api/chart")
-    public ResponseEntity<List<Earning>> getChart(){
-        return ResponseEntity.ok(repository.findAll());
+    public List<Earning> findAll(){
+        return demoService.finaAll();
     }
 }

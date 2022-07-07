@@ -3,6 +3,8 @@ package com.example.demo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * packageName: com.example.demo
  * fileName   : DemoRepository
@@ -16,4 +18,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface DemoRepository extends JpaRepository<Earning, Long> {
+    List<Earning> findAll();
 }

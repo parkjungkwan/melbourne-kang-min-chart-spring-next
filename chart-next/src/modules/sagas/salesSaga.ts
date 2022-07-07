@@ -8,13 +8,13 @@ import { salesApi } from 'modules/apis/salesApi';
 interface salesType{
     type: string;
     payload: {
-        year:string , sales:string, cost:string, profit:string
+        year:string , sales:number, cost:number, profit:number
     }
 }
 interface salesSuccessType{
     type: string;
     payload: {
-        year:string , sales:string, cost:string, profit:string
+        year:string , sales:number, cost:number, profit:number
     }
 }
 
