@@ -3,6 +3,7 @@ import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import createSagaMiddleware from "redux-saga";
 import logger from 'redux-logger'
 import salesReducer,{ SalesState } from "./slice/salesSlice";
+import rootSaga from "./sagas";
 const sagaMiddleware = createSagaMiddleware()
 const isDev = process.env.NODE_ENV === 'development'
 interface RootStates {
@@ -28,7 +29,7 @@ const makestore = () => {
             isDev ? getDefaultMiddleware().concat(logger, sagaMiddleware) : getDefaultMiddleware(),
         devTools: isDev
     });
-    // sagaMiddleware.run(rootSaga)
+    sagaMiddleware.run(rootSaga)
     return store
 }
 export const wrapper = createWrapper(makestore, {

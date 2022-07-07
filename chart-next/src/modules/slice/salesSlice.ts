@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface Earning{
     year:string , sales:string, cost:string, profit:string
 }
@@ -14,8 +14,8 @@ export const salesSlice = createSlice({
     name: 'sales',
     initialState,
     reducers: {
-        salesRequest(state: SalesState, _payload) {
-            alert(`진행 2 : 영업 데이터 ${state.data}`)
+        salesRequest(state: SalesState) {
+            alert(`진행 2 : test 성공 `)
             state.status = 'loading';
         },
         salesSuccess(state: SalesState, { payload }) {

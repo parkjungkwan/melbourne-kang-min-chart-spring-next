@@ -1,11 +1,17 @@
-import React from 'react'
+import { salesRequest } from 'modules/slice/salesSlice'
+import React, { useEffect } from 'react'
 import Chart from 'react-google-charts'
+import { useDispatch } from 'react-redux'
 import styles from '../styles/Bar.module.css'
 
 export const data = [
     { year: '2020', sales: '32323', cost: '2323', profit: '23231' },
     { year: '2021', sales: '67456', cost: '6575', profit: '6765' },
 ]
+
+function jsonConvertToArray(){
+  
+}
 
 export const data2 = [
   ["Year", "Sales", "Expenses", "Profit"],
@@ -21,7 +27,9 @@ export const options = {
       subtitle: "매출, 비용, 이익: 2019-2021년도",
     },
   };
+
 const BarChart = () => {
+
   return (
     <div >
       <h2>Bar Chart</h2>

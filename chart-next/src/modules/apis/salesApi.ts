@@ -7,6 +7,7 @@ export const salesApi = async () => {
         try{
             const response: AxiosResponse<unknown, Earning[]> =
                 await axios.get(`${SERVER}/api/chart`)
+            alert(`${JSON.stringify(response.data)}`)    
             return response.data
         }catch(err){
             return err;
