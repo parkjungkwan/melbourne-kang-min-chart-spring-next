@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import java.util.List;
 
 /**
@@ -21,13 +22,20 @@ import java.util.List;
  * ================================
  * 2022-07-05   parkjungkwan  최초 생성
  */
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class DemoController {
+<<<<<<< HEAD
     private final DemoService demoService;
     @GetMapping("/api/chart")
     public List<Earning> findAll(){
         return demoService.finaAll();
+=======
+    private final DemoService service;
+    @GetMapping("/api/chart")
+    public List<Earning> findAll(){
+        return service.findAll();
+>>>>>>> cef18d645ced0427610468cda3290014a300790a
     }
 }
