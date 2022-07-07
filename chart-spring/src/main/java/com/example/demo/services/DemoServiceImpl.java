@@ -1,11 +1,14 @@
-package com.example.demo;
+package com.example.demo.services;
 
+import com.example.demo.domains.Earning;
+import com.example.demo.domains.User;
+import com.example.demo.domains.UserDTO;
+import com.example.demo.repositories.DemoRepository;
+import com.example.demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-
-import java.util.List;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -22,9 +25,18 @@ import java.util.List;
 @Service @RequiredArgsConstructor
 public class DemoServiceImpl implements DemoService {
     private final DemoRepository repository;
+    private final UserRepository userRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public List<Earning> finaAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public void save1(UserDTO userDTO) throws Exception{
+
+        User returnUser= modelMapper.map(userDTO, User.class);
+        userRepository.save(returnUser);
     }
 }
