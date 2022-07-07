@@ -26,16 +26,10 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
-<<<<<<< HEAD
     private final DemoService demoService;
+
     @GetMapping("/api/chart")
-    public List<Earning> findAll(){
+    public List<Earning> findAll() {
         return demoService.finaAll();
-=======
-    private final DemoService service;
-    @GetMapping("/api/chart")
-    public List<Earning> findAll(){
-        return service.findAll();
->>>>>>> cef18d645ced0427610468cda3290014a300790a
     }
 }
