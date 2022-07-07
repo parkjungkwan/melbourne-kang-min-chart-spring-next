@@ -1,12 +1,10 @@
-package com.example.demo;
+package com.example.demo.controllers;
 
+import com.example.demo.services.DemoService;
+import com.example.demo.domains.Earning;
+import com.example.demo.domains.UserDTO;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
@@ -32,4 +30,6 @@ public class DemoController {
     public List<Earning> findAll() {
         return demoService.finaAll();
     }
+
+
 }

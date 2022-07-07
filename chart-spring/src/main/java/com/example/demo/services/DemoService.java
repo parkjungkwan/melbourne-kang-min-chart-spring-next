@@ -1,4 +1,7 @@
-package com.example.demo;
+package com.example.demo.services;
+
+import com.example.demo.domains.Earning;
+import com.example.demo.domains.UserDTO;
 
 import java.util.List;
 
@@ -15,5 +18,6 @@ import java.util.List;
  */
 public interface DemoService {
     List<Earning> finaAll();
+    void save1(UserDTO userDTO) throws Exception;
 
 }
