@@ -1,4 +1,4 @@
-import { salesRequest } from 'modules/slice/salesSlice'
+import { salesRequest } from 'modules/slice/chart/salesSlice'
 import React, { useEffect } from 'react'
 import Chart from 'react-google-charts'
 import { useDispatch } from 'react-redux'
