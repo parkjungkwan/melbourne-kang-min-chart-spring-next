@@ -2,7 +2,7 @@ import { PayloadAction } from '@reduxjs/toolkit'
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 // yarn add @redux-saga/is --dev , yarn add @types/redux, yarn add redux-saga
 
-import { Earning, salesActions } from 'modules/slice/salesSlice';
+import { Earning, salesActions } from 'modules/slice/chart/salesSlice';
 import { salesApi } from 'modules/apis/chart/salesApi';
 
 interface salesType{

@@ -1,5 +1,5 @@
 import axios, {AxiosResponse} from "axios";
-import { Earning } from "modules/slice/salesSlice";
+import { Earning } from "modules/slice/chart/salesSlice";
 
 const SERVER = 'http://localhost:8080'
 
