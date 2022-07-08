@@ -25,6 +25,8 @@ import javax.persistence.*;
 public class MapInfo {
     @Id @Column(name = "map_id")
     @GeneratedValue(strategy = GenerationType.AUTO) private long mapId;
+
+    @Column private String title;
+    @Column private int lat;
     @Column private int lng;
-    @Column private int lnp;
 }
