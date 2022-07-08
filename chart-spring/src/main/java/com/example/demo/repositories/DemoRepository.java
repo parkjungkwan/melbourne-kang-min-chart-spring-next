@@ -1,6 +1,7 @@
 package com.example.demo.repositories;
 
 import com.example.demo.domains.Earning;
+import com.example.demo.domains.MapInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

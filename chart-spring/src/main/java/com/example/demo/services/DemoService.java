@@ -17,7 +17,7 @@ import java.util.List;
  * 2022-07-06   parkjungkwan  최초 생성
  */
 public interface DemoService {
-    List<Earning> finaAll();
+    List<Earning> findAll();
     void save1(UserDTO userDTO) throws Exception;
 
 }

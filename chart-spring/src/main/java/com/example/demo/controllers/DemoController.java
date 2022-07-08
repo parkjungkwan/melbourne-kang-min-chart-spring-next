@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.domains.MapInfo;
 import com.example.demo.services.DemoService;
 import com.example.demo.domains.Earning;
 import com.example.demo.domains.UserDTO;
@@ -28,8 +29,7 @@ public class DemoController {
 
     @GetMapping("/api/chart")
     public List<Earning> findAll() {
-        return demoService.finaAll();
+        return demoService.findAll();
     }
-
 
 }
