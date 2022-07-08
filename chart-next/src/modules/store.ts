@@ -4,10 +4,12 @@ import createSagaMiddleware from "redux-saga";
 import logger from 'redux-logger'
 import salesReducer,{ SalesState } from "./slice/chart/salesSlice";
 import rootSaga from "./sagas";
+import articleReducer, {ArticleState} from 'modules/board/readArticle'
 const sagaMiddleware = createSagaMiddleware()
 const isDev = process.env.NODE_ENV === 'development'
 interface RootStates {
     sales: SalesState;
+    article: ArticleState;
 }
 const rootReducer:any = (
     state: RootStates,
@@ -19,7 +21,8 @@ const rootReducer:any = (
         }
     }
     return combineReducers({
-        sales: salesReducer
+        sales: salesReducer,
+        article: articleReducer
     })(state,action)
 }
 const makestore = () => {

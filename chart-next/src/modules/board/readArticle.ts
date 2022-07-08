@@ -28,7 +28,7 @@ const ArticleSlice = createSlice({
     //initialState : [] as BoardState[],
     initialState,
     reducers: {
-        writeBoard: (state, action: PayloadAction<Article>) => {
+        writeBoard: (state:ArticleState, action: PayloadAction<Article>) => {
             alert(`진행 2 : 게시글 작성 액션 요청`)
             const newArticle = state.data.concat(action.payload)
             state.data = newArticle
@@ -37,27 +37,27 @@ const ArticleSlice = createSlice({
             //state.push({data: action.payload, status: 'loading', error: null})
         },
 
-        writeBoardSuccess: (state, action: PayloadAction) => {
+        writeBoardSuccess: (state:ArticleState, action: PayloadAction) => {
             state.status = 'successed'
         },
 
-        writeBoardFailure: (state, action: PayloadAction) => {
+        writeBoardFailure: (state:ArticleState, action: PayloadAction) => {
             alert(`게시글 작성 실패`)
             state.status = 'failed'
         },
         
-        fetchBoards : (state) => {
+        fetchBoards : (state:ArticleState) => {
             console.log(`게시글 불러오기 - 리듀서`)
             state.status = 'loading'
         },
         
-        fetchBoardSuccess: (state, {payload}) => {
+        fetchBoardSuccess: (state:ArticleState, {payload}) => {
             const fetchArticle = state.data.concat(payload)
             state.data = fetchArticle
             state.status = "successed"
             console.log(`게시글 불러오기 성공 - 리듀서 ${JSON.stringify( state.data )}`)
         },
-        fetchBoardFailure: (state, {payload}) => {
+        fetchBoardFailure: (state:ArticleState, {payload}) => {
             console.log(`게시글 불러오기 실패 - 리듀서`)
             state.error = payload;
             state.status = 'failed'

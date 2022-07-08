@@ -3,7 +3,7 @@ import { Article, RemoveArticleActions, removeRequest, removeArticleFailure, rem
 
 import { AxiosResponse } from "axios";
 import { Action } from "redux";
-import { call, put, take, takeLatest, throttle } from "redux-saga/effects";
+import { call, put, takeLatest, throttle } from "redux-saga/effects";
 
 function* removeArticleSaga(action : {payload: Article}){
     const param = action.payload

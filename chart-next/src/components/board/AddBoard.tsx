@@ -1,5 +1,16 @@
 import React from 'react'
 
+export interface Article {
+  articleId? : number,
+  title: string,
+  writtenDate? : string,
+  open? : string,
+  content: string,
+  picture? : any,
+  height? : string,
+  weight? : string,
+  comment? : string
+}
 type Props = {
   onChange : (e: React.FormEvent<HTMLInputElement> | any ) => void
   onSubmit : (e: React.FormEvent<HTMLFormElement> ) => void

@@ -8,7 +8,7 @@ type Props = {
     onSubmit : (e: React.FormEvent<HTMLFormElement> ) => void
 
     board: any,
-    articleId? : string,
+    articleId? : number,
     title: string,
     writtenDate? : string,
     open? : string,

@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios'
 import React, { CSSProperties, useEffect, useState } from 'react'
 
 export interface Article {
-  articleId? : string,
+  articleId? : number,
   title: string,
   writtenDate? : string,
   open? : string,
