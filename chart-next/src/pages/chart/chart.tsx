@@ -1,5 +1,5 @@
 import BarChart from "components/BarChart";
-import { salesActions, salesRequest } from "modules/slice/salesSlice";
+import { salesActions, salesRequest } from "modules/slice/chart/salesSlice";
 import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 

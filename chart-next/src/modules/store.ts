@@ -2,7 +2,7 @@ import { AnyAction, CombinedState, combineReducers, configureStore } from "@redu
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import createSagaMiddleware from "redux-saga";
 import logger from 'redux-logger'
-import salesReducer,{ SalesState } from "./slice/salesSlice";
+import salesReducer,{ SalesState } from "./slice/chart/salesSlice";
 import rootSaga from "./sagas";
 const sagaMiddleware = createSagaMiddleware()
 const isDev = process.env.NODE_ENV === 'development'
