@@ -23,5 +23,5 @@ public class MapInfoServiceImpl implements MapInfoService{
     private final MapInfoRepository repository;
 
     @Override
-    public List<MapInfo> findAll(){return null;}
+    public List<MapInfo> findAll(){return repository.findAll();}
 }

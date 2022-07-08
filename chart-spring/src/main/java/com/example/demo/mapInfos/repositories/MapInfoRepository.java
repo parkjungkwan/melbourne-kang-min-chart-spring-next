@@ -4,6 +4,8 @@ import com.example.demo.mapInfos.domains.MapInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * packageName    : com.example.demo.repositories
  * fileName       : MapInfoRepository
@@ -17,4 +19,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface MapInfoRepository extends JpaRepository<MapInfo, Long> {
+    @Override
+    List<MapInfo> findAll();
 }

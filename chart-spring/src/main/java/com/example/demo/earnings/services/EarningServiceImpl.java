@@ -23,8 +23,6 @@ import java.util.List;
 @Service @RequiredArgsConstructor
 public class EarningServiceImpl implements EarningService {
     private final EarningRepository repository;
-    private final UserRepository userRepository;
-    //private final ModelMapper modelMapper;
 
     @Override
     public List<Earning> findAll() {
