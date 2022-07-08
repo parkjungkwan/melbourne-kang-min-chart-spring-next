@@ -1,4 +1,4 @@
-package com.example.demo.domains;
+package com.example.demo.mapInfos.domains;
 
 import lombok.*;
 
@@ -27,6 +27,6 @@ public class MapInfo {
     @GeneratedValue(strategy = GenerationType.AUTO) private long mapId;
 
     @Column private String title;
-    @Column private int lat;
-    @Column private int lng;
+    @Column private double lat;
+    @Column private double lng;
 }

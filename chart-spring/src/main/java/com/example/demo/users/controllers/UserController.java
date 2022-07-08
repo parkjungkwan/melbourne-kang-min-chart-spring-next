@@ -1,8 +1,7 @@
-package com.example.demo.controllers;
+package com.example.demo.users.controllers;
 
-import com.example.demo.domains.UserDTO;
-import com.example.demo.services.DemoService;
-import com.example.demo.repositories.UserRepository;
+import com.example.demo.users.services.UserService;
+import com.example.demo.users.domains.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,11 +20,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 public class UserController {
-    private final DemoService service;
-    private final UserRepository repository;
+    private final UserService service;
 
     @PostMapping(value = "/getToken")
-    public void getToken(@RequestBody UserDTO userDTO) throws Exception{
-        service.save1(userDTO);
+    public void getToken(@RequestBody User user) throws Exception{
+        service.save1(user);
     }
 }

@@ -1,9 +1,7 @@
-package com.example.demo.controllers;
+package com.example.demo.earnings.controllers;
 
-import com.example.demo.domains.MapInfo;
-import com.example.demo.services.DemoService;
-import com.example.demo.domains.Earning;
-import com.example.demo.domains.UserDTO;
+import com.example.demo.earnings.services.EarningService;
+import com.example.demo.earnings.domains.Earning;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,12 +22,12 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequiredArgsConstructor
-public class DemoController {
-    private final DemoService demoService;
+public class EarningController {
+    private final EarningService service;
 
     @GetMapping("/api/chart")
     public List<Earning> findAll() {
-        return demoService.findAll();
+        return service.findAll();
     }
 
 }

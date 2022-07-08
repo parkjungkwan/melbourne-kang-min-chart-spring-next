@@ -1,13 +1,12 @@
-package com.example.demo.domains;
+package com.example.demo.users.repositories;
 
-import lombok.*;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
+import com.example.demo.users.domains.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * packageName    : com.example.demo
- * fileName       : UserDTO
+ * fileName       : UserRepository
  * author         : kimyunseop
  * date           : 2022-07-07
  * description    :
@@ -16,15 +15,6 @@ import java.util.List;
  * -----------------------------------------------------------
  * 2022-07-07        kimyunseop       최초 생성
  */
-@Component @Builder
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class UserDTO {
-    private long userId;
-    String username;
-    String email;
-    private String token;
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 }
-

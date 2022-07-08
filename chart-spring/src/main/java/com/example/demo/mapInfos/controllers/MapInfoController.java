@@ -1,7 +1,7 @@
-package com.example.demo.controllers;
+package com.example.demo.mapInfos.controllers;
 
-import com.example.demo.domains.MapInfo;
-import com.example.demo.services.DemoService;
+import com.example.demo.mapInfos.services.MapInfoService;
+import com.example.demo.mapInfos.domains.MapInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +24,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MapInfoController {
-    private final DemoService service;
+    private final MapInfoService service;
     @GetMapping("/api/map")
     public List<MapInfo> findMapInfos(){
         return null;
