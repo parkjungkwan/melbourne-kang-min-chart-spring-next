@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Document, {Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps} from "next/document";
+import Document, {Html, Head, Main, NextScript, DocumentContext } from "next/document";
 
 const KAKAOMAP_KEY = process.env.NEXT_PUBLIC_KAKAOMAP_API_KEY
 
