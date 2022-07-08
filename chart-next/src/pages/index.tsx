@@ -1,7 +1,5 @@
-import BarChart from 'components/chart/BarChart'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
@@ -21,7 +19,7 @@ const Home: NextPage = () => {
       <Link href="chart/chart"><button >챠트보기</button></Link>
       <Link href="login/googleLogin"><button>구글 로그인</button></Link>
       <Link href="map/kakaoMap"><a><button>카카오 맵</button></a></Link>
-      <Link href="board/addBoard"><a><button>게시판</button></a></Link>
+      <Link href="board/addBoard"><a><button>게시판 </button></a></Link>
     </div>
   )
 }
