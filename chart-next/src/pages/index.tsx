@@ -1,4 +1,4 @@
-import BarChart from 'components/BarChart'
+import BarChart from 'components/chart/BarChart'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
