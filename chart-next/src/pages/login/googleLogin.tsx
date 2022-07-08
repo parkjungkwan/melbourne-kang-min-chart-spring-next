@@ -1,4 +1,4 @@
-import GoogleLogin from 'components/GoogleLogin'
+import GoogleLogin from 'components/login/GoogleLogin'
 import { NextPage } from 'next'
 import React from 'react'
 

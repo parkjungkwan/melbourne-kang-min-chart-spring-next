@@ -1,5 +1,5 @@
 import { useScript } from "hooks";
-import { googleLoginApi } from "modules/apis/googleLoginApi";
+import { googleLoginApi } from "modules/apis/login/googleLoginApi";
 import jwtDecode from "jwt-decode"; // yarn add jwt-decode
 import { useState } from "react";
 
