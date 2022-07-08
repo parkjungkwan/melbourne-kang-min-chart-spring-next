@@ -15,14 +15,16 @@ export const salesSlice = createSlice({
     initialState,
     reducers: {
         salesRequest(state: SalesState) {
-            alert(`진행 2 : test 성공 `)
+            alert(`진행 2 : salesRequest 성공 ${JSON.stringify(state)} `)
             state.status = 'loading';
         },
         salesSuccess(state: SalesState, { payload }) {
+            alert(`진행 2 : salesSuccess 성공 ${JSON.stringify(state)} `)
             state.status = 'idle'
             state.data = [...state.data, payload]
         },
         salesFailure(state: SalesState, { payload }) {
+            alert(`진행 2 : salesSuccess 실패 ${JSON.stringify(state)} `)
             state.status = 'failed'
             state.data = payload
         }

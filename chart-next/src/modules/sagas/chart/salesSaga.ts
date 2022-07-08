@@ -1,9 +1,9 @@
-import { PayloadAction } from '@reduxjs/toolkit'
-import { call, delay, put, takeLatest } from 'redux-saga/effects'
+import { call, delay, put, takeEvery, takeLatest, throttle } from 'redux-saga/effects'
 // yarn add @redux-saga/is --dev , yarn add @types/redux, yarn add redux-saga
 
-import { Earning, salesActions } from 'modules/slice/chart/salesSlice';
+import { salesActions } from 'modules/slice/chart/salesSlice';
 import { salesApi } from 'modules/apis/chart/salesApi';
+import convertChart from 'hooks/convertChart';
 
 interface salesType{
     type: string;
@@ -20,13 +20,14 @@ interface salesSuccessType{
 
 export function* watchSales(){
     
-    yield takeLatest(salesActions.salesRequest, (sales:any) => {
+    yield takeEvery(salesActions.salesRequest, () => {
         try {
-            alert(`진행 3 : test 성공 `)
-            const data: any = salesApi()
+            alert(`진행 3 : salesSaga ${JSON.stringify(salesApi())} `)
+            const data= salesApi()
             console.log(' ###### ')
-            console.log(data)
-            put(salesActions.salesSuccess(data))
+            console.log(data )
+            const data2 = convertChart(data)
+            put(salesActions.salesSuccess(data2))
         }catch(error){
              console.log('3 saga내부 join 실패  ')
              put(salesActions.salesFailure(error))
