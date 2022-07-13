@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * 2022-07-07        kimyunseop       최초 생성
  */
 @RequestMapping("/users")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequiredArgsConstructor
 public class UserController {
