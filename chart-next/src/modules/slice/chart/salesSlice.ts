@@ -15,10 +15,11 @@ export const salesSlice = createSlice({
     initialState,
     reducers: {
         salesRequest(state: SalesState) {
-            alert(`진행 2 : test 성공 `)
+            console.log(`>>>>>>SalesRequest `)
             state.status = 'loading';
         },
         salesSuccess(state: SalesState, { payload }) {
+            console.log(`>>>>>>SalesRequest${JSON.stringify(payload)} `)
             state.status = 'idle'
             state.data = [...state.data, payload]
         },

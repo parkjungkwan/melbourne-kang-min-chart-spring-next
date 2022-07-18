@@ -38,7 +38,7 @@ const makestore = () => {
 export const wrapper = createWrapper(makestore, {
     debug: isDev
 }) ;
-const store = makestore();
+const store = rootReducer;
 export type RootState = ReturnType<typeof rootReducer>
 export type AppState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

@@ -22,13 +22,11 @@ export function* watchSales(){
     
     yield takeLatest(salesActions.salesRequest, (sales:any) => {
         try {
-            alert(`진행 3 : test 성공 `)
             const data: any = salesApi()
-            console.log(' ###### ')
-            console.log(data)
+            console.log(`>>>>>>saga: ${JSON.stringify(data)}`)
             put(salesActions.salesSuccess(data))
         }catch(error){
-             console.log('3 saga내부 join 실패  ')
+             console.log(' saga내부 실패  ')
              put(salesActions.salesFailure(error))
         }
     })
