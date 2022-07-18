@@ -26,7 +26,7 @@ import java.util.List;
 public class MapInfoController {
     private final MapInfoService service;
     @GetMapping("/api/map")
-    public List<MapInfo> findMapInfos(){
-        return null;
+    public List<MapInfo> findAll(){
+        return service.findAll();
     }
 }
